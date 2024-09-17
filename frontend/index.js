@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         recipeDiv.className = 'recipe';
 
         const stars = await backend.getRecipeStars(recipe.id);
-        const starsDisplay = stars !== null ? stars.toFixed(1) : 'N/A';
+        const starsDisplay = typeof stars === 'number' ? stars.toFixed(1) : 'N/A';
 
         recipeDiv.innerHTML = `
             <h3>${recipe.title}</h3>
