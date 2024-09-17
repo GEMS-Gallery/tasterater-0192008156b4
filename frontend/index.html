@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Website</h1>
+    </header>
+    <main>
+        <section id="add-recipe">
+            <h2>Add New Recipe</h2>
+            <form id="recipe-form">
+                <input type="text" id="title" placeholder="Recipe Title" required>
+                <textarea id="ingredients" placeholder="Ingredients (one per line)" required></textarea>
+                <textarea id="instructions" placeholder="Instructions" required></textarea>
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+        <section id="recipe-list">
+            <h2>Recipes</h2>
+            <div id="recipes"></div>
+        </section>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

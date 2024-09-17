@@ -1,0 +1,16 @@
+type Recipe = 
+ record {
+   downvotes: nat;
+   id: nat;
+   ingredients: vec text;
+   instructions: text;
+   title: text;
+   upvotes: nat;
+ };
+service : {
+  addRecipe: (text, vec text, text) -> (nat);
+  getAllRecipes: () -> (vec Recipe) query;
+  getRecipe: (nat) -> (opt Recipe) query;
+  getRecipeStars: (nat) -> (opt float64) query;
+  voteRecipe: (nat, bool) -> (bool);
+}
